@@ -14,5 +14,7 @@ fun getPurchaseStatus(status: PurchaseStatus) = when (status) {
     PurchaseStatus.Ready -> println("доставка готова")
     is PurchaseStatus.Canceled -> {
         println("Доставка отменена, причина: ${status.reason}")
+    } else -> {
+        println("Whatever")
     }
 }
